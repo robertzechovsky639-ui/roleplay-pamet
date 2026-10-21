@@ -1,0 +1,13 @@
+*{box-sizing:border-box}body{margin:0;display:grid;grid-template-columns:220px 1fr 360px;height:100vh;font-family:system-ui,sans-serif;background:#15161c;color:#e6e6ea}
+aside,section{padding:10px;overflow:auto;background:#1d1f27}main{display:flex;flex-direction:column;min-width:0}
+header{padding:8px 14px;border-bottom:1px solid #333;display:flex;justify-content:space-between;align-items:center}h1{font-size:18px;margin:0}h2{font-size:15px;margin:4px 0 8px}
+button,.btn{background:#3b4bd8;color:#fff;border:0;border-radius:6px;padding:6px 10px;margin:2px 0;cursor:pointer;font-size:13px;display:inline-block}aside button,aside .btn{width:100%}
+button:hover{filter:brightness(1.2)}#stories{list-style:none;padding:0}#stories li{padding:6px;border-radius:6px;cursor:pointer;display:flex;justify-content:space-between}#stories li.act{background:#2d3350}
+#stories li span.x{opacity:.6;font-size:12px}#chat{flex:1;overflow:auto;padding:14px}.msg{margin:8px 0;padding:8px 12px;border-radius:10px;background:#242734;white-space:pre-wrap;max-width:85%}
+.msg.user{background:#2c3a6b;margin-left:auto}.msg b{color:#9fb0ff;display:block;font-size:12px}.msg .del{float:right;cursor:pointer;opacity:.5}
+form#sendForm{display:flex;gap:6px;padding:10px;border-top:1px solid #333}textarea,input,select{background:#0f1015;color:#eee;border:1px solid #444;border-radius:6px;padding:6px;font:inherit}
+#input{flex:1;height:70px}.col{display:flex;flex-direction:column;gap:4px}#tabs{display:flex;flex-wrap:wrap;gap:3px;margin:8px 0}#tabs button{background:#30344a;font-size:11px;padding:4px 6px}#tabs button.act{background:#3b4bd8}
+#memSearch,#memNew{width:100%}#memNew{height:60px}.entry{background:#262938;border-radius:6px;padding:6px;margin:4px 0;font-size:13px;white-space:pre-wrap}.entry small{opacity:.6;display:block}
+.entry .ops{float:right}.entry .ops span{cursor:pointer;margin-left:6px}dialog{background:#1d1f27;color:#eee;border:1px solid #444;border-radius:10px;width:420px}dialog label{display:block;margin:6px 0}dialog input:not([type=checkbox]){width:100%}.hint{font-size:12px;opacity:.7}
+mark{background:#c9a400;color:#000}#mode{font-size:12px;opacity:.8}#charBox{font-size:13px;margin-top:6px}
+#progress{position:fixed;bottom:0;left:0;right:0;height:22px;background:#000a;display:none}#bar{height:100%;background:#3b8;width:0}#ptext{position:absolute;left:10px;top:3px;font-size:12px}

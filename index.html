@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roleplay – 10 vrstev paměti</title><link rel="stylesheet" href="style.css"></head><body>
+<aside id="side"><h2>Příběhy</h2><button id="newStory">+ Nový příběh</button><ul id="stories"></ul>
+<hr><button id="settingsBtn">⚙ Nastavení AI</button><button id="exportBtn">⬇ Export JSON</button>
+<label class="btn">⬆ Import JSON<input type="file" id="importFile" accept=".json" hidden></label></aside>
+<main><header><h1 id="storyTitle">Vyber nebo vytvoř příběh</h1><span id="mode"></span></header>
+<div id="chat"></div>
+<form id="sendForm"><select id="speaker"></select><textarea id="input" placeholder="Napiš svůj tah… (Ctrl+Enter odešle)"></textarea>
+<div class="col"><button type="submit">Odeslat</button><button type="button" id="genBtn">✨ AI pokračuj</button></div></form></main>
+<section id="mem"><h2>Paměť (10 vrstev)</h2><input id="memSearch" placeholder="Hledat v celé paměti…">
+<div id="charBox"><b>Postavy:</b> <span id="chars"></span> <button id="addChar">+ postava</button></div>
+<div id="tabs"></div><div id="layerView"></div>
+<textarea id="memNew" placeholder="Nový záznam do vybrané vrstvy"></textarea>
+<div class="col"><button id="memAdd">Přidat záznam</button><button id="rollBtn">⤴ Shrnout nižší vrstvy</button></div></section>
+<dialog id="settings"><form method="dialog"><h3>Lokální AI v prohlížeči (bez klíče)</h3>
+<label>Model<select id="sModel">
+<option value="Qwen2.5-0.5B-Instruct-q4f16_1-MLC">Qwen2.5 0.5B (~0,4 GB, nejrychlejší)</option>
+<option value="Qwen2.5-1.5B-Instruct-q4f16_1-MLC" selected>Qwen2.5 1.5B (~1,1 GB, doporučeno)</option>
+<option value="Qwen2.5-3B-Instruct-q4f16_1-MLC">Qwen2.5 3B (~2,3 GB, nejlepší čeština)</option></select></label>
+<label>Rozpočet kontextu (znaky)<input id="sBudget" type="number" value="6000"></label>
+<label><input type="checkbox" id="sAuto" checked> Automaticky aktualizovat paměť po každém tahu</label>
+<p class="hint">Model se stáhne jednou a uloží do mezipaměti prohlížeče. Vyžaduje WebGPU (Chrome/Edge). Žádný účet ani API klíč.</p>
+<button value="ok" id="sSave">Uložit</button> <button type="button" id="loadBtn">⬇ Načíst model</button></form></dialog>
+<div id="progress"><div id="bar"></div><span id="ptext"></span></div>
+<script type="module" src="app.js"></script></body></html>
